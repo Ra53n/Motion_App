@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/motion_scene">
+
+    <View
+        android:id="@+id/button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/baseline_directions_run_24"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="230dp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/blockFirst"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@color/red"
+            app:layout_constraintBottom_toTopOf="@id/ground"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/blockSecond"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@color/red"
+            app:layout_constraintBottom_toTopOf="@id/ground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/blockThird"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@color/red"
+            app:layout_constraintBottom_toTopOf="@id/ground"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/ground"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="@color/green"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
